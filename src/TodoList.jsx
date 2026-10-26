@@ -1,14 +1,10 @@
-function TodoList () {
-  const todoList = [
-    {id: 454, title: "Call Mom"}, 
-    {id: 455, title: "Paint Living Room"}, 
-    {id: 456, title: "Grocery Shopping"}
-  ];
+function TodoList (props) {
+  
 
   return (
     <>
       <ul>
-        {todoList.map(item => <li key={item.id}>{item.title}</li>)}
+        {props.todoList.map(item => <li key={item.id}>{item.title}</li>)}
       </ul>
     </>
   );

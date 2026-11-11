@@ -17,7 +17,7 @@ function TodoForm({onAddTodo}) {
 
   const handleInputValueChange = (event) => {
     event.preventDefault(); 
-    setWorkingTodoTitle(event.target.value.trim());
+    setWorkingTodoTitle(event.target.value);
   }
 
   return(

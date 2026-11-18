@@ -10,7 +10,6 @@ function TodoListItem ({todo, onCompleteTodo, onUpdateTodo}) {
     setIsEditing(false);
   }
   const handleEdit = (event) => {
-    event.preventDefault(); 
     setWorkingTitle(event.target.value);
   }
 
@@ -28,7 +27,7 @@ function TodoListItem ({todo, onCompleteTodo, onUpdateTodo}) {
       <form onSubmit={handleUpdate}>
         {isEditing ? (<>
         <TextInputWithLabel value={workingTitle} onChange={handleEdit}/>
-        <button onClick={handleCancel}>Cancel</button>
+        <button type='button' onClick={handleCancel}>Cancel</button>
         <button type='button' onClick={handleUpdate} disabled={!isValidTodoTitle(workingTitle)}>Update</button>
         </>):
         (<>
